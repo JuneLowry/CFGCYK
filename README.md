@@ -25,7 +25,7 @@ To get us up and running, lets try making (semi-) arbitrary length lists of the 
     ps = PhraseStructure()
     
     #Add our intermediate symbol "A".
-    ps.add_symbol("A")
+    ps.add_symbol("A", is_terminal=False)
     
     #Add intermediate rules.
     #Intermediate rules are those which take an intermediate symbol (one that has children)
@@ -35,7 +35,7 @@ To get us up and running, lets try making (semi-) arbitrary length lists of the 
     #Add our terminal symbol
     #Terminal symbols are those which have no children, and essentially act as our desired
     #   output symbols.
-    ps.add_symbol("a")
+    ps.add_symbol("a", is_terminal=True)
     
     #Add our terminal rule
     ps.add_terminal_rule("A", "a")
