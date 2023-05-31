@@ -6,7 +6,7 @@ Provides the PhraseStructure class.
 """
 
 import random
-from phrase_structure_symbol import PhraseStructureSymbol
+from .phrase_structure_symbol import PhraseStructureSymbol
 
 class PhraseStructure:
     """
@@ -341,7 +341,7 @@ class PhraseStructure:
         raise NotImplementedError
 
 
-    def generate_symbol_string(self, depth=4, brute_force=500):
+    def generate_symbol_string(self, depth=4, brute_force=12):
         symbol_string = [None]
         # First, we will iterate rule replacements to the depth specified.
         for _ in range(depth):
